@@ -1,0 +1,50 @@
+<p>demo3 works!</p>
+
+<h1>project list</h1>
+
+    <table border="1">
+        <tr>
+            <td>PId</td>
+            <td><input type="text" [(ngModel)]="projectid"></td>
+        </tr>
+        <tr>
+            <td>ProjectName</td>
+            <td><input type="text" [(ngModel)]="projectname"></td>
+        </tr>
+        <tr>
+            <td>Domain</td>
+            <td><select [(ngModel)]="domain">
+                <option *ngFor="let item of domains">{{item}}</option>
+                
+            </select></td>
+        </tr>
+        <tr>
+            <td>StartDate</td>
+            <td><input type="date" [(ngModel)]="startdate"></td>
+        </tr>
+        <tr>
+            <td>End Date</td>
+            <td><input type="date" [(ngModel)]="enddate"></td>
+        </tr>
+        <tr colspan="2">
+            <button (click)='Add()'>Submit</button>
+            
+        </tr>
+    </table>
+
+<table border="5">
+    <tr>
+        <th>PId</th>
+        <th>ProjectName</th>
+        <th>Domain</th>
+        <th>StartDate</th>
+        <th>End Date</th>
+    </tr>
+    <tr *ngFor="let item of list">
+    <td>{{item.projectid}}</td>
+    <td>{{item.projectname}}</td>
+    <td>{{item.domain}}</td>
+    <td>{{item.startdate}}</td>
+    <td>{{item.enddate}}</td>
+    </tr>
+</table>

@@ -1,0 +1,25 @@
+<p>login works!</p>
+<div>
+    <table>
+        <tr>
+            <td>UserName</td>
+            <td>
+                <input type="text" [(ngModel)]="obj.uname">
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>
+                <input type="password" [(ngModel)]="obj.password">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="Login(obj.uname,obj.password)">Login</button>
+            </td>
+        </tr>
+        </table>
+        <pre>
+            {{this.res}}
+        </pre>
+        
